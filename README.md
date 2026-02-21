@@ -1,23 +1,44 @@
 # AI-Powered Automation Assistant
 
-An AI-driven workflow automation system built using **n8n** that integrates multiple Google Workspace services and external APIs through a centralized webhook architecture.
+An AI-driven workflow orchestration system built using **n8n** that integrates multiple Google Workspace services and external APIs through a centralized webhook architecture.
 
-This system enables dynamic execution of real-world actions (email, scheduling, document updates, search, expense tracking) based on structured natural language inputs.
+This project enables dynamic execution of real-world actions (email, scheduling, document updates, search, expense tracking) based on structured natural language inputs.
+
+---
+
+## 🖼 Workflow Snapshot
+
+![n8n Workflow](./n8n-workflow-screenshot.png)
+
+---
+
+## 💡 Why This Project
+
+Most automation systems are static and tool-specific.  
+This project introduces an AI-driven orchestration layer that dynamically selects and executes tools based on user intent.
+
+Instead of predefined rules, the workflow interprets structured inputs and routes them to the correct service, enabling flexible and scalable automation.
+
+Focus Areas:
+- AI-based tool routing
+- Multi-API integration
+- Workflow reliability
+- Structured output validation
 
 ---
 
 ## 🏗 Architecture Overview
 
-The workflow follows a centralized orchestration design:
+The system follows a centralized orchestration model:
 
 1. **Webhook Entry Point**  
-   Receives user requests in structured format.
+   Receives user queries in structured format.
 
 2. **AI Agent (LLM Node)**  
    Interprets user intent and generates structured JSON output.
 
 3. **Intent-Based Routing Logic**  
-   Routes requests dynamically to the appropriate service nodes.
+   Dynamically selects appropriate API nodes based on parsed intent.
 
 4. **Service Integrations**
    - Gmail API  
@@ -26,73 +47,64 @@ The workflow follows a centralized orchestration design:
    - Task Management API  
    - Search API  
 
-5. **Response Formatter**  
-   Returns structured confirmation or execution results.
+5. **Response Formatter**
+   Returns execution results or confirmation messages.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key Capabilities
 
-- Centralized AI orchestration via webhook
-- Dynamic tool selection from natural language input
-- Structured JSON output parsing and validation
-- Rate-limit handling for stable API execution
-- Modular workflow components for scalability
-- Supports 10+ user-triggered actions across 5+ APIs
+- Centralized webhook-based AI orchestration
+- Dynamic tool execution from natural language inputs
+- Integration of 5+ APIs
+- Support for 10+ user-triggered actions
+- Structured JSON parsing and validation
+- Modular workflow design for scalability
+- Basic rate-limit handling and execution safeguards
 
 ---
 
 ## 📌 Example Supported Actions
 
-- Send or read emails  
-- Create, update, or fetch calendar events  
-- Create or modify Google Docs  
-- Add or retrieve tasks  
-- Perform search queries  
-- Log expenses  
+- Send and read emails
+- Create, update, and fetch calendar events
+- Create and modify Google Docs
+- Add and retrieve tasks
+- Perform search queries
+- Log and track expenses
 
 ---
 
-## 🛠 Technical Stack
+## 🛠 Tech Stack
 
 - **n8n** (Workflow Orchestration)
 - **REST APIs**
 - **Google Workspace APIs**
-- **Webhook-based architecture**
-- **Structured JSON validation**
+- **Webhook Architecture**
+- **Structured JSON Validation**
 
 ---
 
-## 🔒 Reliability Measures
+## 🔒 Reliability & Stability Measures
 
-- Schema-based JSON parsing to prevent malformed tool execution  
-- Basic rate-limit handling and retry logic  
-- Conditional routing to avoid incorrect API invocation  
-- Error-handling nodes for workflow stability  
-
----
-
-## ✅ Testing & Validation
-
-- Validated across 50+ structured test interactions  
-- Tested multi-action scenarios (email + calendar + docs)  
-- Verified error handling for malformed inputs  
+- Schema-based JSON parsing to prevent malformed tool execution
+- Conditional routing to avoid incorrect API invocation
+- Basic rate-limit handling
+- Error-handling nodes for workflow continuity
+- Tested across 50+ structured interactions
 
 ---
 
-## 🎯 Project Objective
+## ⚙ Setup Instructions
 
-Designed to move beyond static automation and build an AI-driven orchestration system capable of dynamically selecting and executing tools based on user intent.
+1. Clone this repository
+2. Import the provided workflow JSON file into n8n
+3. Configure Google API credentials
+4. Set webhook endpoint
+5. Execute workflow
 
-Focus: system design, API integration, and workflow reliability.
-
----
-
-## 🔮 Future Improvements
-
-- Add authentication layer for multi-user access  
-- Enhance retry mechanisms for production-grade resilience  
-- Implement logging and monitoring  
-- Deploy with secure credential management on cloud infrastructure  
+> ⚠ API credentials are not included for security reasons.
 
 ---
+
+## 📂 Repository Structure
